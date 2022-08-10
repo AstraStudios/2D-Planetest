@@ -2339,6 +2339,7 @@ GameObject:
   - component: {fileID: 7126530242481212519}
   - component: {fileID: 7126530242481212518}
   - component: {fileID: 7994373065320156153}
+  - component: {fileID: 8097358943569813119}
   m_Layer: 0
   m_Name: GeorgioG391Fuselage
   m_TagString: Player
@@ -2484,6 +2485,20 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 0
+--- !u!114 &8097358943569813119
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7126530242481212537}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 56e6b85bfdb4e4940b3eacacc843c877, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  speed: 0
+  maxSpeed: 0.1
 --- !u!1 &7126530242575686024
 GameObject:
   m_ObjectHideFlags: 0

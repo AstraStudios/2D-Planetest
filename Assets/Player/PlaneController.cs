@@ -11,10 +11,11 @@ public class PlaneController : MonoBehaviour
     bool engineStarted = false;
     bool throttleIsUp = false;
 
-    float speed;
-    [SerializeField] float maxSpeed;
+    [SerializeField] float speed;
+    [SerializeField] float maxSpeed = .1f;
     private float planeXValue;
     private float planeYValue;
+    float planeZRotate;
 
     // Start is called before the first frame update
     void Start()
@@ -45,6 +46,7 @@ public class PlaneController : MonoBehaviour
         }
 
         Throttle();
+        TurnPlane();
     }
 
     void Throttle()
@@ -66,6 +68,22 @@ public class PlaneController : MonoBehaviour
                 Debug.Log("Throttle Down");
                 throttleIsUp = false;
             }
+        }
+    }
+
+    void TurnPlane()
+    {
+        if (Input.GetKeyDown(KeyCode.W))
+        {
+            Debug.Log("Turning Nose Up");
+            planeZRotate += 5f;
+            gameObject.transform.Rotate(0, 0, planeZRotate);
+        }
+        if (Input.GetKeyDown(KeyCode.S))
+        {
+            Debug.Log("Turning Nose Down");
+            planeZRotate -= 5f;
+            gameObject.transform.Rotate(0, 0, planeZRotate);
         }
     }
 }
